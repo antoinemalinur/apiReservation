@@ -10,7 +10,7 @@ import java.util.Date;
 
 @Data
 @Entity
-public class Reservation {
+public class ReservationReply {
 
     private @Id @GeneratedValue Long id;
     private String reference;
@@ -27,9 +27,10 @@ public class Reservation {
     private String classe;
     private String registrationStatus;
 
-    private Reservation() {}
 
-    public Reservation( String reference, String dateDepart, String dateArrivee, String heureDepart, String heureArrivee, String lieuDepart, String lieuArrivee, String dureeTrajet, Boolean paiement, String nom, String place, String classe, String reservationStatus ) {
+    public ReservationReply() {}
+
+    public ReservationReply( String reference, String dateDepart, String dateArrivee, String heureDepart, String heureArrivee, String lieuDepart, String lieuArrivee, String dureeTrajet, Boolean paiement, String nom, String place, String classe, String registrationStatus ) {
         this.reference = reference;
         this.dateDepart = dateDepart;
         this.dateArrivee = dateArrivee;
@@ -42,7 +43,7 @@ public class Reservation {
         this.nom = nom;
         this.place = place;
         this.classe = classe;
-        this.registrationStatus = reservationStatus;
+        this.registrationStatus = registrationStatus;
     }
 
     public Long getId() {
